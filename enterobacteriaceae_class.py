@@ -1,4 +1,4 @@
-import enterobacteriaceae_family as Enterobacteriaceae
+import enterobacteriaceae_domain as Enterobacteriaceae
 
 ## Géneros dentro de la familia de la bacteria Enterobacteriaceae --Lista Incompleta y Preliminar--
 biostraticola = Enterobacteriaceae()

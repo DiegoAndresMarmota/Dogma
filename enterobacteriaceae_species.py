@@ -1,4 +1,4 @@
-import enterobacteriaceae_genero as Enterobacteriaceae
+import enterobacteriaceae_class as Enterobacteriaceae
 
 
 class Biostraticola (Enterobacteriaceae):
@@ -218,7 +218,7 @@ class Raoultella (Enterobacteriaceae):
         self.genus = genus
         self.species = species
         ## 
-        return Enterobacteriaceae.Enterobacteriaceae(name):
+        return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
 class RibonucleicAcid (Enterobacteriaceae):
