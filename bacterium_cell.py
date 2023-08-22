@@ -1,15 +1,27 @@
 class Bacterium:
     def __init__(self, shell, appendage, bacterial_nucleus, endospore):
-        self.shell = shell
-        self.appendage = appendage
-        self.bacterial_nucleus = bacterial_nucleus
-        self.endospore = endospore
+        if isinstance(shell, Shell) and isinstance(appendage, Appendage) and isinstance(bacterial_nucleus, bacterial_nucleus) and isinstance(endospore, Endospore):
+            self.shell = shell
+            self.appendage = appendage
+            self.bacterial_nucleus = bacterial_nucleus
+            self.endospore = endospore
+            if isinstance(shell, bool):
+                self.shell = True
+            if isinstance(appendage, bool):
+                self.appendage = True
+            if isinstance(bacterial_nucleus, bool):
+                self.bacterial_nucleus = True
+            if isinstance(endospore, bool):
+                self.endospore = True
+        
         
 class Shell(Bacterium):
     def __init__(self, capsule, membrane_exterior):
         super().__init__(self.shell)
-        self.capsule = capsule
-        self.membrane_exterior = membrane_exterior
+        if isinstance(capsule, dict):
+            self.capsule = capsule
+        if isinstance(membrane_exterior, dict):
+            self.membrane_exterior = membrane_exterior
 
     def capsule(self):
         capsule = {
@@ -43,8 +55,10 @@ class Shell(Bacterium):
 class Appendage(Bacterium):
     def __init__(self, pili, flagella):
         super().__init__(self.appendage)
-        self.pili = pili
-        self.flagella = flagella
+        if isinstance(pili, dict(int, str)):
+            self.pili = pili
+        if isinstance(flagella, dict(int, str)):
+            self.flagella = flagella
         
     def pili(self):
         pili = {
@@ -72,16 +86,86 @@ class Appendage(Bacterium):
 class Bacterial_Nucleus(Bacterium):
     def __init__(self, cytoplasm, nucleus, plasmid):
         super().__init__(self.bacterial_nucleus)
-        self.cytoplasm = cytoplasm
-        self.nucleus = nucleus
-        self.plasmid = plasmid
+        if isinstance(cytoplasm, dict(int, str)):
+            self.cytoplasm = cytoplasm
+        if isinstance(nucleus, dict(int, str)):
+            self.nucleus = nucleus
+        if isinstance(plasmid, dict(int, str)):
+            self.plasmid = plasmid
+            
+    def cytoplasm(self):
+        cytoplasm = {
+        0 : "protein",
+        1 : "no protein"
+        }
+        if cytoplasm == 0:
+            return "protein"
+        elif cytoplasm == 1:
+            return "no protein"
+        else: "please, introduce a valid number"
+    
+    def nucleus(self):
+        nucleus = {
+        0 : "protein",
+        1 : "no protein"
+        }
+        if nucleus == 0:
+            return "protein"
+        elif nucleus == 1:
+            return "no protein"
+        else: "please, introduce a valid number"
+        
+    def plasmid(self):
+        plasmid = {
+        0 : "protein",
+        1 : "no protein"
+        }
+        if plasmid == 0:
+            return "protein"
+        elif plasmid == 1:
+            return "no protein"
+        else: "please, introduce a valid number"
         
         
 class Endospore(Bacterium):
     def __init__(self, endosymbiont, endosymbiont_cell, endosymbiont_membrane):
         super().__init__(self.endospore)
-        self.endosymbiont = endosymbiont
-        self.endosymbiont_cell = endosymbiont_cell
-        self.endosymbiont_membrane = endosymbiont_membrane
+        if isinstance(endosymbiont, dict(int, str)):
+            self.endosymbiont = endosymbiont
+        if isinstance(endosymbiont_cell, dict(int, str)):
+            self.endosymbiont_cell = endosymbiont_cell
+        if isinstance(endosymbiont_membrane, dict(int, str)):
+            self.endosymbiont_membrane = endosymbiont_membrane
+    
+    def endosymbiont(self):
+        endosymbiont = {
+        0 : "protein",
+        1 : "no protein"
+        }
+        if endosymbiont == 0:
+            return "protein"
+        elif endosymbiont == 1:
+            return "no protein"
+        else: "please, introduce a valid number"
         
+    def endosymbiont_cell(self):
+        endosymbiont_cell = {
+        0 : "protein",
+        1 : "no protein"
+        }
+        if endosymbiont_cell == 0:
+            return "protein"
+        elif endosymbiont_cell == 1:
+            return "no protein"
+        else: "please, introduce a valid number"
         
+    def endosymbiont_membrane(self):
+        endosymbiont_membrane = {
+        0 : "protein",
+        1 : "no protein"
+        }
+        if endosymbiont_membrane == 0:
+            return "protein"
+        elif endosymbiont_membrane == 1:
+            return "no protein"
+        else: "please, introduce a valid number"
