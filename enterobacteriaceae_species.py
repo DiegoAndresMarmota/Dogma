@@ -1,23 +1,28 @@
 import enterobacteriaceae_class as Enterobacteriaceae
+import enterobacteriaceae_genus as Genus
 
 
-class Biostraticola (Enterobacteriaceae):
+class Biostraticola (Enterobacteriaceae, Genus):
     def __init__(self, name, genus, species):
         super().__init__(name, genus, species)
-        self.name = name
-        self.genus = genus
-        self.species = species
-        ## 
+        self.name = "Biostraticola"
+        self.genus = ""
+        self.species = Enterobacteriaceae
+        self.form = "rod-shaped"
+        self.structure = "non-endospore-forming"
+        self.energy = "facultatively anaerobic"
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
-class Buttiauxella (Enterobacteriaceae):
+class Buttiauxella (Enterobacteriaceae, Genus):
     def __init__(self, name, genus, species):
         super().__init__(name, genus, species)
-        self.name = name
-        self.genus = genus
-        self.species = species
-        ## 
+        self.name = Buttiauxella
+        self.genus = Genus.Monodermic
+        self.species = Enterobacteriaceae
+        self.form = "rod-shaped"
+        self.structure = "endospore-forming"
+        self.energy = "facultatively anaerobic"
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
@@ -27,7 +32,6 @@ class Cedecea (Enterobacteriaceae):
         self.name = name
         self.genus = genus
         self.species = species
-        ## 
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
@@ -37,7 +41,6 @@ class Citrobacter (Enterobacteriaceae):
         self.name = name
         self.genus = genus
         self.species = species
-        ## 
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
@@ -47,7 +50,6 @@ class Dickeya (Enterobacteriaceae):
         self.name = name
         self.genus = genus
         self.species = species
-        ## 
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
@@ -57,7 +59,6 @@ class Enterobacillus (Enterobacteriaceae):
         self.name = name
         self.genus = genus
         self.species = species
-        ## 
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
@@ -67,7 +68,6 @@ class Escherichia (Enterobacteriaceae):
         self.name = name
         self.genus = genus
         self.species = species
-        ## 
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
@@ -77,7 +77,6 @@ class Franconibacter (Enterobacteriaceae):
         self.name = name
         self.genus = genus
         self.species = species
-        ## 
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
@@ -87,7 +86,6 @@ class Gibbsiella (Enterobacteriaceae):
         self.name = name
         self.genus = genus
         self.species = species
-        ## 
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
@@ -97,7 +95,6 @@ class Klebsiella (Enterobacteriaceae):
         self.name = name
         self.genus = genus
         self.species = species
-        ## 
         return Enterobacteriaceae.Enterobacteriaceae(name)
 
 
