@@ -22,11 +22,10 @@ class Life(Bacterial_taxonomy):
 
 
 class Domain(Bacterial_taxonomy):
-    def __init__(self, bacteria):
+    def __init__(self, bacteria, ):
         super().__init__()
         self.bacterial = bacteria
         return Domain
-        
 
 
 class Kingdom(Bacterial_taxonomy):
@@ -36,8 +35,10 @@ class Kingdom(Bacterial_taxonomy):
 
 
 class Phylum(Bacterial_taxonomy):
-    def __init__(self):
+    def __init__(self, name, group):
         super().__init__()
+        self.name = name
+        self.group = group
         pass
 
 
